@@ -15,11 +15,9 @@ class Magazine(Publication):
         self.chief_editor = chief_editor
     def print_information(self):
         print(f"Magazine: {self.name}, Chief editor: {self.chief_editor}")
-# main
 Magazine("Donald Duck", "Aki Hyyppä").print_information()
 Book("Compartment No. 6", "Rosa Liksom", 192).print_information()
 #2
-#1
 class Car:
     def __init__(self, reg_number, max_speed):
         self.reg_number = reg_number
@@ -50,3 +48,4 @@ electric.drive(3)
 gasoline.drive(3)
 print("Electric car kilometer counter:", electric.travelled_distance, "km")
 print("Gasoline car kilometer counter:", gasoline.travelled_distance, "km")
+
