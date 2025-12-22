@@ -3,7 +3,7 @@
 console.log("I'm printing to console!");
 // 2
 const username = prompt("Type your name.");
-console.log("Hello, " + username + "!");
+document.getElementById("output").innerHTML += ("Hello, " + username + "!<br>");
 // 3
 const a = Number(prompt("Enter first integer:"));
 const b = Number(prompt("Enter second integer:"));
@@ -11,9 +11,10 @@ const c = Number(prompt("Enter third integer:"));
 const sum = a + b + c;
 const product = a * b * c;
 const average = sum / 3;
-console.log("sum:" + sum);
-console.log("product:" + product);
-console.log("average:" + average);
+document.getElementById("output").innerHTML +=
+    "Sum: " + sum + "<br>" +
+    "Product: " + product + "<br>" +
+    "Average: " + average + "<br><br>";
 // 4
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -29,17 +30,22 @@ if (number === 1) {
 } else {
     house = "Ravenclaw";
 }
-console.log(studentname + ", you are "+ house);
+document.getElementById("output").innerHTML +=
+    studentname + ", you are " + house;
 //5
 const year = prompt("Enter a year:");
-if (year % 4 === 0) {
-    console.log("this is a leap year");
+let result;
+if (year % 400 === 0) {
+    result = "this is a leap year"
 }
-    else if (year % 100 === 0 , year % 400 === 0) {
-        console.log("this is a leap year");
+    else if (year % 100 === 0) {
+        result = "this is not a leap year"
+    }
+    else if (year % 4 === 0) {
+        result = "this is a leap year"
 }
     else {
-        console.log("this is not a leap year");
+        result = "this is not a leap year"
 }
 //7
 const rolls = Number(prompt("How many rolls?"));
